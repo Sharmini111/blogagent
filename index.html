@@ -383,7 +383,13 @@
     if (fetchingPages) return;
     fetchingPages = true;
     const clientWebsite = document.getElementById('client_website').value.trim();
-    if (!clientWebsite) { showAlertModal('Please enter a client website URL first'); fetchingPages = false; return; }
+    if (!clientWebsite) { alert('Please enter a client website URL first'); fetchingPages = false; return; }
+    const keyword = document.getElementById('keyword').value.trim();
+    const topic = document.getElementById('topic').value.trim();
+    if (!keyword) {
+      const proceed = confirm('You haven\'t entered a Target Keyword yet. For better link suggestions, enter your keyword first. Continue fetching pages anyway?');
+      if (!proceed) { fetchingPages = false; return; }
+    }
     const btn = document.getElementById('fetch-btn');
     btn.textContent = 'Fetching...';
     btn.disabled = true;
@@ -391,12 +397,17 @@
       const res = await fetch(WEBHOOK_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'fetch_links', client_website: clientWebsite })
+        body: JSON.stringify({
+          action: 'fetch_links',
+          client_website: clientWebsite,
+          keyword: keyword,
+          topic: topic
+        })
       });
       const raw = await res.text();
       let data;
       try { data = JSON.parse(raw); } catch(e) {
-        showAlertModal('Could not fetch pages. You can enter links manually below.');
+        alert('Could not fetch pages. You can enter links manually below.');
         showInternalLinksBox();
         document.getElementById('utility-pages-manual-box').style.display = 'block';
         return;
@@ -405,7 +416,7 @@
       fetchedPages = result.pages || [];
       autoUtilityPages = result.utility_pages || [];
       if (fetchedPages.length === 0) {
-        showAlertModal('No pages found for this website. You can enter links manually below.');
+        alert('No pages found for this website. You can enter links manually below.');
         showInternalLinksBox();
         document.getElementById('utility-pages-manual-box').style.display = 'block';
         return;
@@ -421,7 +432,7 @@
       }
     } catch(e) {
       console.error(e);
-      showAlertModal('Could not fetch pages. You can enter links manually below.');
+      alert('Could not fetch pages. You can enter links manually below.');
       showInternalLinksBox();
       document.getElementById('utility-pages-manual-box').style.display = 'block';
     } finally {
