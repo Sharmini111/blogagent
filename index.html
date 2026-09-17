@@ -3,7 +3,7 @@
 <head>
   <title>PAS2008 Blog Agent</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"></script>
   <style>
     :root{
@@ -20,7 +20,7 @@
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;height:100%}
     body{
-      font-family:'Inter',Arial,sans-serif;
+      font-family:'Roboto',Arial,sans-serif;
       background:var(--cream);
       color:var(--ink);
       display:flex;
@@ -33,7 +33,7 @@
     .top-bar-left{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
     .top-bar .logo-slot{width:110px;height:32px;flex-shrink:0;display:flex;align-items:center}
     .top-bar .logo-slot img{max-width:110px;max-height:32px;object-fit:contain}
-    .top-bar h1{color:#fff;font-family:'Source Serif 4',serif;font-weight:600;font-size:15px;margin:0;white-space:nowrap}
+    .top-bar h1{color:#fff;font-family:'Roboto',sans-serif;font-weight:600;font-size:15px;margin:0;white-space:nowrap}
     .top-bar .contact-info{display:flex;align-items:center;gap:18px}
     .top-bar .contact-info a{color:#D8D8D8;font-weight:400;display:flex;align-items:center;gap:6px;text-decoration:none}
     .top-bar .contact-info a:hover{color:#fff}
@@ -58,10 +58,10 @@
 
     h2{font-family:'Source Serif 4',serif;color:var(--navy);font-weight:600;font-size:19px;border-bottom:2px solid var(--red);padding-bottom:8px;margin-top:0}
     h3{font-family:'Source Serif 4',serif;color:var(--navy);font-weight:600;font-size:16px;border-left:4px solid var(--red);padding-left:10px}
-    input,textarea,select{width:100%;padding:10px 12px;margin:8px 0;font-size:14px;font-family:'Inter',Arial,sans-serif;border:1px solid var(--line);border-radius:4px;box-sizing:border-box;background:#fff;color:var(--ink)}
+    input,textarea,select{width:100%;padding:10px 12px;margin:8px 0;font-size:14px;font-family:'Roboto',Arial,sans-serif;border:1px solid var(--line);border-radius:4px;box-sizing:border-box;background:#fff;color:var(--ink)}
     input:focus,textarea:focus,select:focus{outline:none;border-color:var(--red)}
     textarea{height:120px;resize:vertical}
-    button{padding:11px 22px;margin:5px 5px 5px 0;font-size:13.5px;font-weight:700;letter-spacing:.2px;cursor:pointer;border:none;border-radius:4px;font-family:'Inter',Arial,sans-serif;transition:opacity .15s,transform .1s;text-transform:uppercase}
+    button{padding:11px 22px;margin:5px 5px 5px 0;font-size:13.5px;font-weight:700;letter-spacing:.2px;cursor:pointer;border:none;border-radius:4px;font-family:'Roboto',Arial,sans-serif;transition:opacity .15s,transform .1s;text-transform:uppercase}
     button:hover{opacity:.9}
     button:active{transform:translateY(1px)}
     .submit{background:var(--red);color:#fff}
@@ -76,7 +76,7 @@
     #loading-text{font-size:14.5px;color:#555;margin:0}
     #article-display{background:var(--cream);padding:18px;border-radius:4px;font-size:14px;max-height:600px;overflow-y:auto;line-height:1.65;color:var(--ink);border:1px solid var(--line)}
     #article-display h1,#article-display h2,#article-display h3{font-family:'Source Serif 4',serif;color:var(--navy);border:none;padding:0}
-    #article-display p,#article-display strong{color:var(--ink);font-family:'Inter',Arial,sans-serif}
+    #article-display p,#article-display strong{color:var(--ink);font-family:'Roboto',Arial,sans-serif}
     #article-display a{color:var(--red);font-weight:600;text-decoration:underline}
     .cost{background:#EEF2F7;border-left:3px solid var(--navy);padding:10px 14px;margin:10px 0;font-size:13px}
     .seo{background:#EEF2F7;border-left:3px solid var(--navy-light);padding:10px 14px;margin:10px 0;font-size:13px}
@@ -106,7 +106,6 @@
     .page-item:hover{background:var(--cream)}
     .page-item input[type="checkbox"]{width:auto;margin:0;flex-shrink:0}
     .page-item label{font-size:12px;color:var(--ink);font-weight:400;cursor:pointer;margin:0;word-break:break-all;flex:1}
-    #utility-pages-manual-box{display:none}
 
     .footer-line{width:100%;height:6px;background:#0D0D0D;flex-shrink:0}
 
@@ -116,17 +115,17 @@
     .modal-box{background:#fff;border-radius:8px;max-width:420px;width:100%;padding:28px 26px 22px;text-align:center;border-top:4px solid var(--red);box-shadow:0 12px 40px rgba(0,0,0,.3);animation:modal-pop .15s ease-out}
     @keyframes modal-pop{from{transform:scale(.96);opacity:0}to{transform:scale(1);opacity:1}}
     .modal-icon{width:40px;height:40px;border-radius:50%;background:#FBEEEE;color:var(--red);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-family:'Source Serif 4',serif;font-weight:700;font-size:20px}
-    .modal-box p{font-size:14.5px;color:var(--ink);line-height:1.6;margin:0 0 22px;font-family:'Inter',Arial,sans-serif}
+    .modal-box p{font-size:14.5px;color:var(--ink);line-height:1.6;margin:0 0 22px;font-family:'Roboto',Arial,sans-serif}
     .modal-buttons{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
     .modal-buttons button{margin:0}
   </style>
 </head>
 <body>
 
-<!-- <div class="top-bar">
+<div class="top-bar">
   <div class="top-bar-inner">
     <div class="top-bar-left">
-      <div class="logo-slot"><img src="Premium-Accounting-Solutions-e1594690618232.webp" alt="Premium Accounting Solution logo"></div>
+      <div class="logo-slot"><img src="https://pas2008.co.nz/wp-content/uploads/2020/07/Premium-Accounting-Solutions-e1594690618232.png" alt="Premium Accounting Solution logo"></div>
       <h1>Premium Accounting Solution</h1>
       <div class="contact-info">
         <a href="tel:0303032868">
@@ -143,11 +142,13 @@
       <a href="https://pas2008.co.nz/accounting-packages" target="_blank">Packages</a>
       <a href="https://pas2008.co.nz/shop" target="_blank">Shop</a>
       <a href="https://pas2008.co.nz/forms" target="_blank">Forms</a>
+      <a href="https://pas2008.co.nz/category/blog" target="_blank">Blog</a>
+      <a href="https://pas2008.co.nz/income-tax-calculator" target="_blank">Calculators</a>
       <a href="https://pas2008.co.nz/about-us" target="_blank">About</a>
       <a href="https://pas2008.co.nz/contact-us" target="_blank" class="contact-btn">Contact Us</a>
     </nav>
   </div>
-</div> -->
+</div>
 
 <div class="page-title-bar">
   <div class="page-title-inner">
@@ -177,16 +178,12 @@
       <button type="button" class="submit" onclick="addLinkField()" style="margin-top:6px;padding:8px 16px;font-size:13px">+ Add Another Link</button>
     </div>
 
-    <div id="utility-pages-manual-box" style="display:none">
-      <label>Utility Pages for FAQ <span class="optional-label">(optional — About Us, Contact, Returns Policy URLs, comma separated)</span></label>
-      <textarea id="utility_pages_manual" placeholder="e.g. https://pas2008.co.nz/about-us, https://pas2008.co.nz/contact-us"></textarea>
-    </div>
-
+    
     <label>Target Keyword (required)</label>
     <input id="keyword" type="text" placeholder="e.g. how to file a GST return in New Zealand"/>
     <label>Topic <span class="optional-label">(optional)</span></label>
     <input id="topic" type="text" placeholder="e.g. GST Return Filing in New Zealand: Deadlines, Requirements and Common Mistakes"/>
-    <label>Content Topic Ideas / Notes <span class="optional-label">(optional)</span></label>
+    <label>Company Insight <span class="optional-label">(optional)</span></label>
     <textarea id="operator_topic_notes" placeholder="e.g. focus on small business owners, mention IRD deadlines, avoid overly technical tax jargon"></textarea>
     <label>Target Audience <span class="optional-label">(optional)</span></label>
     <input id="target_audience" type="text" placeholder="e.g. small business owners in Auckland, first-time company directors, contractors and self-employed individuals"/>
@@ -383,13 +380,22 @@
     if (fetchingPages) return;
     fetchingPages = true;
     const clientWebsite = document.getElementById('client_website').value.trim();
-    if (!clientWebsite) { alert('Please enter a client website URL first'); fetchingPages = false; return; }
+    if (!clientWebsite) { showAlertModal('Please enter a client website URL first'); fetchingPages = false; return; }
     const keyword = document.getElementById('keyword').value.trim();
     const topic = document.getElementById('topic').value.trim();
     if (!keyword) {
-      const proceed = confirm('You haven\'t entered a Target Keyword yet. For better link suggestions, enter your keyword first. Continue fetching pages anyway?');
-      if (!proceed) { fetchingPages = false; return; }
+      showConfirmModal(
+        'You haven\'t entered a Target Keyword yet. For better link suggestions, enter your keyword first. Continue fetching pages anyway?',
+        () => { doFetchPages(clientWebsite, keyword, topic); }
+      );
+      fetchingPages = false;
+      return;
     }
+    doFetchPages(clientWebsite, keyword, topic);
+  }
+
+  async function doFetchPages(clientWebsite, keyword, topic) {
+    fetchingPages = true;
     const btn = document.getElementById('fetch-btn');
     btn.textContent = 'Fetching...';
     btn.disabled = true;
@@ -407,34 +413,25 @@
       const raw = await res.text();
       let data;
       try { data = JSON.parse(raw); } catch(e) {
-        alert('Could not fetch pages. You can enter links manually below.');
+        showAlertModal('Could not fetch pages. You can enter links manually below.');
         showInternalLinksBox();
-        document.getElementById('utility-pages-manual-box').style.display = 'block';
         return;
       }
       const result = Array.isArray(data) ? (data[0].json || data[0]) : data;
       fetchedPages = result.pages || [];
       autoUtilityPages = result.utility_pages || [];
       if (fetchedPages.length === 0) {
-        alert('No pages found for this website. You can enter links manually below.');
+        showAlertModal('No pages found for this website. You can enter links manually below.');
         showInternalLinksBox();
-        document.getElementById('utility-pages-manual-box').style.display = 'block';
         return;
       }
       document.getElementById('pages-box').style.display = 'block';
       showInternalLinksBox();
       renderPageList();
-
-      if (autoUtilityPages.length > 0) {
-        document.getElementById('utility-pages-manual-box').style.display = 'none';
-      } else {
-        document.getElementById('utility-pages-manual-box').style.display = 'block';
-      }
     } catch(e) {
       console.error(e);
-      alert('Could not fetch pages. You can enter links manually below.');
+      showAlertModal('Could not fetch pages. You can enter links manually below.');
       showInternalLinksBox();
-      document.getElementById('utility-pages-manual-box').style.display = 'block';
     } finally {
       btn.textContent = 'Fetch Pages';
       btn.disabled = false;
@@ -550,7 +547,6 @@
     const clientWebsite = document.getElementById('client_website').value.trim();
     const wordCount     = document.getElementById('word_count').value || '1300';
     const targetAudience = document.getElementById('target_audience').value.trim();
-    const utilityPagesManual = document.getElementById('utility_pages_manual').value.trim();
     if (!keyword) { showAlertModal('Please enter a keyword first'); return; }
     currentKeyword    = keyword;
     currentTopic      = topic;
@@ -585,7 +581,6 @@
           internal_anchor_text_4: internalLinks[3] ? internalLinks[3].anchor : '',
           target_audience:      targetAudience,
           utility_pages:        utilityPages,
-          utility_pages_manual: utilityPagesManual,
           word_count:           wordCount
         })
       });
@@ -614,11 +609,7 @@
     document.getElementById('unique-display').innerHTML =
       '<strong>Unique Factor:</strong> ' + (item.unique_factor || 'N/A');
     document.getElementById('cost-display').innerHTML =
-      '<strong>Total Cost (all steps so far):</strong> ' + (item.article_cost || '$0.00') + '<br>' +
-      '<strong>This Step:</strong> ' + (item.this_step_total_cost || '$0.00') +
-      ' &nbsp;(Claude: ' + (item.this_step_claude_cost || '$0.00') +
-      ' &nbsp;·&nbsp; Ahrefs: ' + (item.this_step_ahrefs_cost || '$0.00') + ')<br>' +
-      '<strong>Tokens:</strong> Input ' + (item.inputTokens || 0) + ' &nbsp;·&nbsp; Output ' + (item.outputTokens || 0);
+      '<strong>Total Cost (all steps so far):</strong> ' + (item.article_cost || '$0.00');
     const seo = item.seo_check || {};
     document.getElementById('seo-display').innerHTML =
       '<strong>SEO Check:</strong>' +
@@ -645,6 +636,7 @@
         <tr><td><strong>Unique Factor</strong></td><td>${item.unique_factor || ''}</td></tr>
         <tr><td><strong>Internal Links Used</strong></td><td>${item.internal_links_used || 'None'}</td></tr>
         <tr><td><strong>External Links Used</strong></td><td>${item.external_links_found || 'None'}</td></tr>
+        <tr><td><strong>FAQ Sources</strong></td><td>${(item.faq_sources || []).join('<br>') || 'None'}</td></tr>
         <tr><td><strong>Content Gaps</strong></td><td>${contentGaps}</td></tr>
         <tr><td><strong>E-E-A-T Overall</strong></td><td>${(item.eeat_score || {}).overall || ''}/10</td></tr>
         <tr><td><strong>Total Cost</strong></td><td>${item.article_cost || ''}</td></tr>
@@ -682,8 +674,6 @@
     document.getElementById('internal-links-box').style.display = 'none';
     document.getElementById('internal-links-container').innerHTML = '';
     document.getElementById('pages-list').innerHTML       = '';
-    document.getElementById('utility_pages_manual').value = '';
-    document.getElementById('utility-pages-manual-box').style.display = 'none';
     linkCount = 0;
     const taField = document.getElementById('target_audience'); if(taField) taField.value = '';
     currentKeyword = ''; currentTopic = ''; currentNotes = ''; currentCountry = 'global';
@@ -759,11 +749,12 @@
           seo_check:              currentData.seo_check             || {},
           eeat_score:             currentData.eeat_score            || {},
           article_cost:           currentData.article_cost          || '',
+          real_questions:         currentData.real_questions        || [],
+          faq_sources:            currentData.faq_sources           || [],
           inputTokens:            currentData.inputTokens           || 0,
           outputTokens:           currentData.outputTokens          || 0,
           target_audience:        currentData.target_audience       || '',
-          utility_pages:          currentData.utility_pages         || [],
-          utility_pages_manual:   currentData.utility_pages_manual  || ''
+          utility_pages:          currentData.utility_pages         || []
         })
       });
       const raw = await res.text();
@@ -817,11 +808,12 @@
           seo_check:              currentData.seo_check             || {},
           eeat_score:             currentData.eeat_score            || {},
           article_cost:           currentData.article_cost          || '',
+          real_questions:         currentData.real_questions        || [],
+          faq_sources:            currentData.faq_sources           || [],
           inputTokens:            currentData.inputTokens           || 0,
           outputTokens:           currentData.outputTokens          || 0,
           target_audience:        currentData.target_audience       || '',
           utility_pages:          currentData.utility_pages         || [],
-          utility_pages_manual:   currentData.utility_pages_manual  || '',
           external_links_found:   currentData.external_links_found  || ''
         })
       });
@@ -875,11 +867,12 @@
           seo_check:              currentData.seo_check             || {},
           eeat_score:             currentData.eeat_score            || {},
           article_cost:           currentData.article_cost          || '',
+          real_questions:         currentData.real_questions        || [],
+          faq_sources:            currentData.faq_sources           || [],
           inputTokens:            currentData.inputTokens           || 0,
           outputTokens:           currentData.outputTokens          || 0,
           target_audience:        currentData.target_audience       || '',
-          utility_pages:          currentData.utility_pages         || [],
-          utility_pages_manual:   currentData.utility_pages_manual  || ''
+          utility_pages:          currentData.utility_pages         || []
         })
       });
       const raw = await res.text();
@@ -925,6 +918,8 @@
           seo_check:              currentData.seo_check             || {},
           eeat_score:             currentData.eeat_score            || {},
           article_cost:           currentData.article_cost          || '',
+          real_questions:         currentData.real_questions        || [],
+          faq_sources:            currentData.faq_sources           || [],
           inputTokens:            currentData.inputTokens           || 0,
           outputTokens:           currentData.outputTokens          || 0
         })
